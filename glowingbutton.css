@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #8dc26f;
+
+}
+.container{
+    margin: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div{
+    color: #fff;
+    padding: 10px 50px;
+    margin: 30px 0 0 20px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 3px solid #12cddc;
+    position: relative;
+    transform:1s all ease ;
+}
+div::before{
+    content: "";
+    background: #12cddc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    transition: all 0.6s ease;
+}
+.hovera::before{
+height: 150px;
+width: 200px;
+border-radius: 50%;
+}
+.hovera::before{
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+.hovera:hover::before{
+    top:-30px;
+    left:-30px;
+}
+.hoverb::before{
+    content: "";
+    position: absolute;
+    background: #12cddc;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: scalex(0);
+    transform-origin: left;
+}
+.hoverb:hover::before{
+    transform: scaleX(1);
+}
+.hoverb:hover{
+    color: #fff;
+}
+.hoverc::before{
+    width: 100%;
+    height: 0;
+}
+.hoverc:hover::before{
+    height: 100%;
+    width: 100%;
+}
+.hoverd::before{
+    height: 100%;
+    width: 0;
+}
+.hoverd:hover::before{
+    height: 100%;
+    width: 100%;
+}
+.hovere::before{
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(65deg);
+
+}
+.hovere:hover::before{
+    height: 400%;
+}
+.hoverf::before{
+    width: 100%;
+    height: 0;
+    transform: translate(45deg) translate(-50%);
+}
+.hoverf:hover::before
+{
+    height: 700%;
+
+}
